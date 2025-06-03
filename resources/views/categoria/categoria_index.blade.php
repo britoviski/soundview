@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Categoria</div>
+                <div class="card-header">Marca</div>
 
                 <script>
                     function ConfirmDelete(){
