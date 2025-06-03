@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Categoria - CREATE</div>
+                <div class="card-header">Marca - CREATE</div>
 
                 <div class="card-body">
 
