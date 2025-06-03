@@ -14,6 +14,10 @@
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
+        <a href="{{ route('login') }}">
+            <button>Login</button>
+        </a>
+
 			<!-- Header -->
 				<section id="header">
 
