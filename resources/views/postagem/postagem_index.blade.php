@@ -22,6 +22,12 @@
                         </div>
                     @endif
 
+                    @if (session('messageErro'))
+                        <div class="alert alert-danger">
+                            {{ session('messageErro') }}
+                        </div>
+                    @endif
+
                     <table class="table">
                         <tr>
                           <th>ID</th>

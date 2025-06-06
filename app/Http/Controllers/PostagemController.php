@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Categoria;
 use App\Models\Postagem;
 
@@ -13,7 +14,7 @@ class PostagemController extends Controller
      */
     public function index()
     {
-        $postagens = Postagem::orderBy('titulo', 'ASC')->get();
+        $postagens = Postagem::where('user_id', auth()->user()->id)->orderBy('titulo', 'ASC')->get();
         return view('postagem.postagem_index', compact('postagens'));
     }
 
@@ -67,6 +68,11 @@ class PostagemController extends Controller
     public function edit(string $id)
     {
         $postagem = Postagem::find($id);
+        $user_id = auth::id();
+        $ehDoUsuario= Postagem::where('id', $id)->where('user_id', $user_id)->exists();
+        if (!$ehDoUsuario) {
+            return redirect()->route('postagem.index')->with('messageErro', 'Você não tem permissão para editar esta postagem!');
+        }
         $categorias = Categoria::orderBy('nome', 'ASC')->get();
         return view('postagem.postagem_edit', compact('postagem', 'categorias'));
     }
