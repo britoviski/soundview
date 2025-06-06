@@ -15,9 +15,10 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'name' => 'Josimar de Brito Silva',
+            'name' => 'Josimar de Brito Silva - ADMIN',
             'email' => 'josimar_brito@hotmail.com',
             'password' => Hash::make('123456789'),
+            'perfil' => 'admin',
         ]);
 
             DB::table('users')->insert([
@@ -33,9 +34,10 @@ class UserSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Josimar de Brito Silva 2',
+            'name' => 'Josimar de Brito Silva 2 - PADRAO',
             'email' => 'josimar_brito2@hotmail.com',
             'password' => Hash::make('123456789'),
+            'perfil' => 'padrao',
         ]);
     }
 }
