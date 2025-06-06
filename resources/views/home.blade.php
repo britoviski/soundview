@@ -13,8 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                        {{ __('Olá!') }}
+                    @can('is_admin')
+                        <p>Você logou com uma conta de usuário administrador</p>
+                    @else
+                        <p>Você logou com uma conta de usuário padrão</p>
+                    @endcan
 
-                    {{ __('Olá!') }}
+
                 </div>
             </div>
         </div>

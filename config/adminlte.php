@@ -319,6 +319,7 @@ return [
             'text' => 'Categoria',
             'url' => 'categoria',
             //'can' => 'manage-blog',
+            'can' => 'is_admin',
         ],
 
         [
