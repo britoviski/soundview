@@ -41,5 +41,12 @@ class UserSeeder extends Seeder
             'password' => Hash::make('123456789'),
             'perfil' => 'padrao',
             ]);
+
+            DB::table('users')->insert([
+            'name' => 'Usuario Padrão - PADRAO',
+            'email' => 'usuario@padrao.com',
+            'password' => Hash::make('123456789'),
+            'perfil' => 'padrao',
+            ]);
         }
 }
