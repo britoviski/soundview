@@ -31,4 +31,10 @@ class SiteController extends Controller
         return view('welcome', compact('categorias', 'postagens', 'autores'));
     }
 
+    public function comentario($id){
+        dd('Comentário: ' . $id);
+       // $postagem = Postagem::find($id);
+       // return view('feed.comentario', compact('postagem'));
+    }
+
 }
