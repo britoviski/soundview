@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use OwenIt\Auditing\Contracts\Auditable;
 
 class Postagem extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
-    
+
     protected $table = 'postagens';
 
     public function categoria(): HasOne
@@ -22,6 +23,12 @@ class Postagem extends Model implements Auditable
     {
         //return $this->hasOne(Categoria::class);
         return $this->hasOne(User::class, 'id', 'user_id');
+    }
+
+    public function commentarios(): HasMany
+    {
+        //return $this->hasMany(Comment::class, 'foreign_key', 'local_key');
+        return $this->hasMany(Commentario::class, id, 'postagem_id');
     }
 
 }

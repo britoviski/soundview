@@ -14,6 +14,7 @@ class PostagemController extends Controller
      */
     public function index()
     {
+        $user_id = Auth::id();
         $postagens = Postagem::where('user_id', auth()->user()->id)->orderBy('titulo', 'ASC')->get();
         return view('postagem.postagem_index', compact('postagens'));
     }

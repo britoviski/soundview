@@ -19,6 +19,9 @@ Route::get('/', [SiteController::class, 'index'])->name('site.index');
 Route::get('/PostagemByCategoriaId/{id}', [SiteController::class, 'PostagemByCategoriaId'])->name('site.PostagemByCategoriaId');
 Route::get('/PostagemByAutorId/{id}', [SiteController::class, 'PostagemByAutorId'])->name('site.PostagemByAutorId');
 
+//   /feed/postagem/' . $value->id . '/comentario
+Route::get('/feed/postagem/{id}/comentario', [SiteController::class, 'comentario'])->name('comentario');
+
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
