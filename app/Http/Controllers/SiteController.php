@@ -32,7 +32,7 @@ class SiteController extends Controller
     }
 
     public function comentario($id){
-        dd('Comentário: ' . $id);
+       dd('Comentário: ' . $id);
        // $postagem = Postagem::find($id);
        // return view('feed.comentario', compact('postagem'));
     }

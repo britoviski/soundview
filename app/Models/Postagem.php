@@ -28,7 +28,7 @@ class Postagem extends Model implements Auditable
     public function commentarios(): HasMany
     {
         //return $this->hasMany(Comment::class, 'foreign_key', 'local_key');
-        return $this->hasMany(Commentario::class, id, 'postagem_id');
+        return $this->hasMany(Commentario::class, 'id', 'postagem_id');
     }
 
 }
