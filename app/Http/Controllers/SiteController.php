@@ -32,9 +32,11 @@ class SiteController extends Controller
     }
 
     public function comentario($id){
-       dd('Comentário: ' . $id);
-       // $postagem = Postagem::find($id);
-       // return view('feed.comentario', compact('postagem'));
+       //dd('Comentário: ' . $id);
+       $categorias = Categoria::orderBy('nome', 'ASC')->get();
+       $autores = User::orderBy('name', 'ASC')->get();
+       $postagem = Postagem::find($id);
+       return view('feed.comentario', compact('categorias','autores', 'postagem'));
     }
 
 }
