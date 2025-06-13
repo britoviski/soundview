@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PostagemController;
 Use App\Http\Controllers\SiteController;
 Use App\Http\Controllers\UserController;
+Use App\Http\Controllers\ComentarioController;
 
 //Route::get('/', function () {
 //    return view('welcome');
@@ -21,6 +22,8 @@ Route::get('/PostagemByAutorId/{id}', [SiteController::class, 'PostagemByAutorId
 
 //   /feed/postagem/' . $value->id . '/comentario
 Route::get('/feed/postagem/{id}/comentario', [SiteController::class, 'comentario'])->name('comentario');
+
+Route::post('comentario', [ComentarioController::class, 'store'])->name('comentario.store');
 
 Auth::routes();
 

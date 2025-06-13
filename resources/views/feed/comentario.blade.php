@@ -18,8 +18,22 @@ teste<!-- resources/views/child.blade.php -->
 
                     </article>
 
+                    <!-- FORMULÁRIO -->
+
+                    <form action="{{ url('/comentario')}}" method="post">
+                        @csrf
+                        <div class="form-group">
+                        <label>Comentário:</label>
+                        <input type="hidden" name="postagem_id" value="{{ $postagem->id }}">
+                        <textarea id="w3review" class="form-control" name="conteudo" rows="4" cols="50">
+                        </textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ENVIAR</button>
+                    </form>
+
                     @foreach($postagem->comentarios as $value)
                         <p>{{ $value->conteudo }}</p>
+                        <p> ->> {{ $value->autor->name }}</p>
                     @endforeach
 
         </div>
