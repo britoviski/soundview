@@ -13,12 +13,7 @@
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
-
-        <a href="{{ route('login') }}">
-            <button>Login</button>
-        </a>
-
-			<!-- Header -->
+            <!-- Header -->
 				<section id="header">
 
 					<!-- Logo -->
@@ -27,6 +22,17 @@
                          -->
 					<!-- Nav -->
 						<nav id="nav">
+                              <!-- Botão de login -->
+    <div style="position: absolute; top: 1rem; right: 1rem;">
+        <a href="{{ route('login') }}"
+           style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #007bff; border-radius: 50%;">
+            <svg style="width: 20px; height: 20px;" fill="none" stroke="white" stroke-width="2"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M5.121 17.804A9 9 0 1119.88 6.196 9 9 0 015.121 17.804zM15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+        </a>
+    </div>
 							<ul>
 								<li class="current"><a href="{{ url("/") }}">Principal</a></li>
 								<li>
@@ -46,6 +52,8 @@
                                         @endforeach
 									</ul>
 								</li>
+
+                                
 
 								<li><a href="left-sidebar.html">Left Sidebar</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
