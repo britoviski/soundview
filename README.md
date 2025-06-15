@@ -1,40 +1,70 @@
-Como clonar e instalar o sistema em outra máquina
-Você precisa ter uma conta ativa no GitHub (https://github.com/)
+# SoundView 🎵🔊  
 
-Pré-requisito:
-Xampp (https://www.apachefriends.org/)
-Mysql Workbench (https://dev.mysql.com/downloads/workbench/)
-Git (https://git-scm.com/)
-GitHub Desktop (https://desktop.github.com/)
-Composer (https://getcomposer.org/download/)
-Visual Studio Code (https://code.visualstudio.com/)
-Instalar no Visual Studio Code a extensão Laravel Extension Pack (https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack)
-Instalar no Visual Studio Code a extensão Material Icon Theme (https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-Node (https://nodejs.org/) OBS.: Não esqueça de reiniciar o computador
-1) Clonar o repositório do GitHub
-Vá até o projeto no GitHub que deseja clonar e clique no botão verde escrito "<> Code" em seguida vai abrir um submenu e você deve clicar em "Open with GitHub Desktop". O GitHub Desktop vai abrir, em sua máquina, perguntando onde deve clonar o repositório. Clone no diretório "c:/xampp/htdocs/"
+## Desenvolvedores 👨‍💻
+Ana Beatriz Barboza
+Josimar Brito
+Guilherme Cleber do Nascimento
+  
+**SoundView** é um blog moderno voltado para avaliação de soundbars. A plataforma oferece uma experiência rica tanto para usuários que querem encontrar a melhor opção de compra, quanto para administradores que publicam análises e organizam o conteúdo.
 
-2) Abra o projeto no Visual Studio Code
-3) Crie o arquivo .env com base no arquivo .env.example
-Abra o terminal e execute o código entre aspas "copy .env.example .env"
+---
 
-4) Mude o nome do banco no arquivo .env
-Altere esta parte do código para ficar igual esta abaixo.
+## ✨ Visão Geral
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=meuprojeto
-DB_USERNAME=root
-DB_PASSWORD=
-5) Instale as depedências
-Abra o terminal e execute o código entre aspas "composer install"
+SoundView permite que os usuários naveguem por diferentes marcas e categorias de soundbars, curtam e comentem em postagens, além de acessarem links diretos para compra. Administradores têm acesso total à gestão de conteúdo e à moderação de comentários e denúncias.
 
-6) Gere a APP_KEY (chave de criptografia)
-Abra o terminal e execute o código entre aspas "php artisan key:generate"
+---
 
-7) Rode as migrations (criação das tabelas)
-Abra o terminal e execute o código entre aspas "php artisan migrate"
+## 🚀 Funcionalidades
 
-8) Rode os SEEDs (inserção dos dados nas tabelas)
-Abra o terminal e execute o código entre aspas "php artisan db:seed"
+### 👥 Usuários Comuns
+- 🔍 Visualizar avaliações de soundbars
+- 👍 Curtir postagens
+- 💬 Comentar nas postagens
+- 🚩 Denunciar postagens inapropriadas
+- 🛒 Acessar links de compra recomendados
+- 📂 Navegar por categorias e marcas
+- 🏆 Ver destaques:
+  - Melhor Custo-Benefício
+  - Soundbars por Marca
+
+### 🔐 Administradores
+- ✏️ Criar, editar e excluir postagens
+- 🗃️ Gerenciar categorias e marcas
+- 🧹 Moderar comentários e denúncias
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Backend:** Laravel 12.x
+- **Frontend:** Blade + Bootstrap
+- **Banco de Dados:** MySQL
+- **Autenticação:** Laravel
+- **Outros:** Composer, NPM, Eloquent ORM
+
+---
+
+## ⚙️ Instalação
+
+# Clone o repositório
+git clone https://github.com/britoviski/soundview
+
+# Acesse o diretório do projeto
+cd soundview
+
+# Instale as dependências do PHP
+composer install
+
+# Instale dependências do frontend
+npm install && npm run dev
+
+# Configure o ambiente
+cp .env.example .env
+php artisan key:generate
+
+# Ajuste suas variáveis de ambiente no .env
+
+# Rode as migrações e (opcional) seeders
+php artisan migrate --seed
+
