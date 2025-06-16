@@ -14,7 +14,7 @@
                             <h2>{{ $value->titulo }}</h2>
                             <p>Categoria: {{ $value->categoria->nome }}</p>
                         </header>
-                        <p>{{!! $value->descricao !!}}</p>
+                        <p>{!! $value->descricao !!}</p>
                         <p>Autor: {{ $value->autor->name }}</p>
 
                          <footer>
@@ -32,6 +32,7 @@
 
     </section>
 
-    {{ $postagens->links() }}
+    {{ $postagens->onEachSide(1)->links('vendor.pagination.simple-default') }}
+
 
 @endsection
