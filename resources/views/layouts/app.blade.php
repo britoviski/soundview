@@ -9,7 +9,7 @@
 		<title>SoundView</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ url("assets/css/main.css") }}" />
+		<link rel="stylesheet" href="{{ url("assets/css/soundview.css") }}" />
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -25,7 +25,7 @@
                               <!-- Botão de login -->
     <div style="position: absolute; top: 1rem; right: 1rem;">
         <a href="{{ route('login') }}"
-           style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #007bff; border-radius: 50%;">
+           style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: #FF7700; border-radius: 50%;">
             <svg style="width: 20px; height: 20px;" fill="none" stroke="white" stroke-width="2"
                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -67,9 +67,7 @@
 						<div class="row">
 							<div class="col-8 col-12-medium">
 								<section>
-									<header>
-										<h2>Blandit nisl adipiscing</h2>
-									</header>
+
 									<ul class="dates">
 										<li>
 											<span class="date">Jun <strong>10</strong></span>
